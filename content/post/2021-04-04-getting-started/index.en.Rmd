@@ -40,20 +40,22 @@ Using WPS you can read and write SAS language programs exactly way you do it usi
 
 
 
-- 1 Step One 
+-  Step One 
 
 
 
-Register to [worldprogramming ](https://www.worldprogramming.com/)
+Register to [worldprogramming ](https://www.worldprogramming.com/){target = "_blank"}
 ![Home page](images/intro.JPG)
 
 
-Select  
+
+
+-  Select  
 
 ![download](images/download.JPG) 
 
 
-then choose
+-  then choose
 
 ![community edition](images/coummunity edition.JPG)
 
@@ -70,3 +72,8 @@ installation is complete , you can open an untitled program and it would look li
 
 ![WPS Editor](images/sas_editor.JPG)
 
+Once you have the software is installed
+
+## Clinical data to download
+
+Clinical data at Project Data Sphere [worldprogramming ](https://www.worldprogramming.com/){target = "_blank"}
