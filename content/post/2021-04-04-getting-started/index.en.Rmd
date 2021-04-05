@@ -48,10 +48,14 @@ Register to [worldprogramming ](https://www.worldprogramming.com/)
 ![Home page](images/intro.JPG)
 
 
-Select (![download](images/download.JPG)) 
+Select  
+
+![download](images/download.JPG) 
 
 
-then select  ![community edition](images/coummunity edition.JPG)
+then choose
+
+![community edition](images/coummunity edition.JPG)
 
 Once you download the .msi file run the .msi file and it will ask you the folder 
 
@@ -59,9 +63,10 @@ Once you download the .msi file run the .msi file and it will ask you the folder
 
 After you have done with installation . Download the License file 
 
-![Licence](images/Licence.JPG) and browse it local server. Use the help document . Once 
+![Licence](images/Licence.JPG)
+
+and browse the file using local server. Use the help document . Once 
 installation is complete , you can open an untitled program and it would look like this 
 
 ![WPS Editor](images/sas_editor.JPG)
-
 
