@@ -44,7 +44,7 @@ Using WPS you can read and write SAS language programs exactly way you do it usi
 
 
 
-Register to [worldprogramming ](https://www.worldprogramming.com/){target = "_blank"}
+Register to [worldprogramming ](https://www.worldprogramming.com/){:target = "_blank"}
 ![Home page](images/intro.JPG)
 
 
@@ -76,4 +76,4 @@ Once you have the software is installed
 
 ## Clinical data to download
 
-Clinical data at Project Data Sphere [worldprogramming ](https://www.worldprogramming.com/){target = "_blank"}
+Clinical data at Project Data Sphere [worldprogramming ](https://https://www.projectdatasphere.org/){:target = "_blank"}
