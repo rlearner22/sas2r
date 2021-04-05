@@ -9,10 +9,59 @@ categories:
 tags: []
 ---
 
-I am Clinical statistical programmer who analyze clinical data using SAS software. 
-There is way to build and run SAS language programs WPS. Read and write .Sas programs, 
-.sasbat files with out any complicated set up. The way do it is 
+I am a statistical programmer who analyze clinical data using SAS software.Have been working 
+more than 12 years using SAS software , which is great tool to analyze the data and very easy
+for Data manipulation . Recently I started exploring ways to analyze data available outside the 
+work environment, which is client specific. These are the things I ended up finding out 
 
-## Step One 
+
+
+
+## How Can I use SAS software for personnel research 
+There are couple of ways you can do 
+
+
+
+
+- 1. Download student version of SAS software. For this we need to have Student email ID, which I do not have it 
+
+
+
+
+- 2. Second option is when I reading through the SAS-L found something about World programming 
+
+
+Using WPS you can read and write SAS language programs exactly way you do it using SAS. I am using for my personnel purposes only  as there was court litigation earlier in UK court and looks like WPS won the case . You can google more about it up 
+
+
+
+
+## How to use WPS
+
+
+
+- 1 Step One 
+
+
+
 Register to [worldprogramming ](https://www.worldprogramming.com/)
 ![Home page](images/intro.JPG)
+
+
+Select (![download](images/download.JPG)) 
+
+
+then select  ![community edition](images/coummunity edition.JPG)
+
+Once you download the .msi file run the .msi file and it will ask you the folder 
+
+![Installation ](images/first_time.JPG) . 
+
+After you have done with installation . Download the License file 
+
+![Licence](images/Licence.JPG) and browse it local server. Use the help document . Once 
+installation is complete , you can open an untitled program and it would look like this 
+
+![WPS Editor](images/sas_editor.JPG)
+
+
