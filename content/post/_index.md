@@ -1,3 +1,4 @@
 ---
-title:My Blog
+title: My Blog
 ---
+
