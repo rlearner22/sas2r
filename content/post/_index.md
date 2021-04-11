@@ -1,4 +1,4 @@
 ---
-title: My Blog
+title: My thoughts (ramblings) about SAS and R 
 ---
 
