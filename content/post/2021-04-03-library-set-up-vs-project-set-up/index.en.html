@@ -1,6 +1,6 @@
 ---
-title: Library set up Vs Project set up 
-author: Phani
+title: SAS Library set up Vs R Studio Project set up 
+author: PhaniKumar S tata
 cover: images/Rama_sethu.jpg
 date: '2021-04-03'
 slug: library-set-up-vs-project-set-up
@@ -14,15 +14,71 @@ tags:
 <script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
 
 
-<div id="keepimg-all-the-files-associated-with-a-project-data-together" class="section level1">
-<h1>Keepimg all the files associated with a project Data together</h1>
-</div>
-<div id="sas-libraries" class="section level1">
-<h1>SAS Libraries</h1>
+<div id="keeping-all-the-files-associated-with-a-project-scriptoutputdata-together" class="section level1">
+<h1>Keeping all the files associated with a project (script/output/data) together</h1>
+<div id="sas-libraries-r-studio-project" class="section level2">
+<h2>SAS Libraries / R Studio Project</h2>
+<p>High level Summary</p>
+<table style="width:100%;">
+<caption>SAS Libname Vs R -studio setup</caption>
+<colgroup>
+<col width="5%" />
+<col width="16%" />
+<col width="56%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>SAS</th>
+<th>R</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“PERM” is windows folder</td>
+<td>Libname “c:\PERM”</td>
+<td>setwd(“c:\PERM”)</td>
+<td>DO NOT USE this</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Use system macro</td>
+<td>use HERE package</td>
+<td>Recommended</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>can use “\” windows style backward</td>
+<td>accepts only “/” forward slashes . When used “\” will throw an error</td>
+<td>R has different representation for “\”, On Windows you can use it either way</td>
+</tr>
+<tr class="even">
+<td>Create windows folder</td>
+<td>Version 9.3 using option DLCREATEDIR Libname newdir “C:/”</td>
+<td><p>use Library (HERE) install.packages(“here) install_load(”here")</p>
+<p>ifelse(!dir.exists(“data”) , dir.create(“data”) , “Folder exits already”)</p>
+<p>ifelse(!dir.exists(“output”) , dir.create(“output”) , “Folder exits already”)</p>
+<p>ifelse(!dir.exists(“output/data”) , dir.create(“output/data”) , “Folder exits already”)</p>
+<p>ifelse(!dir.exists(“output/plots”) , dir.create(“Output/plots”) , “Folder exits already”)</p>
+<p>ifelse(!dir.exists(“script”) , dir.create(“script”) , “Folder exits already”)</p></td>
+<td>This will project folders</td>
+</tr>
+<tr class="odd">
+<td>GUI way</td>
+<td>You can use the Create library icon located in the toolbox. Enter the library name</td>
+<td>In R studio use Click File-&gt; New Project then Click New Director –&gt; Empty Project then give a project name ( would be same name of the project on windows that would be created ) then location where you want it created default is Document folder ( You can change it by using BROWSE button</td>
+<td>It is important to create a *FOLDER* to use here package . Using the New project option is highly recommended .</td>
+</tr>
+</tbody>
+</table>
+<p>![<em>Illustration by Allison Horst</em>&lt;<a href="https://github.com/allisonhorst">allisonhorst (Allison Horst) (github.com)</a>&gt;SAS Libraries</p>
+<p>Detailed Explanation</p>
+<p>SAS users can skip part</p>
 <p>SAS tables are stored in SAS libraries. A SAS library is a collection of SAS files that are referenced and stored as a unit.</p>
 <p>Each file is a member of the library. Work is a temporary library where you can store and access SAS tables for the duration of the SAS session. It is the default library.</p>
-<p>Note: SAS deletes the Work library and its contents when the SAS session ends.
-Sashelp is a permanent library that contains sample SAS tables that you can access during your SAS session.</p>
+<p>Note: SAS deletes the Work library and its contents when the SAS session ends. Sashelp is a permanent library that contains sample SAS tables that you can access during your SAS session.</p>
 <p>Sasuser is a permanent library that you can use to store and access SAS tables in any SAS session. Users can create their own SAS libraries.</p>
 <ul>
 <li>A user-defined library is permanent. Tables are stored until the user deletes them.</li>
@@ -33,9 +89,10 @@ Sashelp is a permanent library that contains sample SAS tables that you can acce
 <p>First, identify the location of the library. For example, a Microsoft Windows folder could be used as a SAS library. You can use an existing folder or create a new one. After a folder is identified or created, the Windows operating system knows about the folder, but SAS does not.</p>
 <p>To use this folder as a SAS library, you must tell SAS about it. Sometimes this is referred to as making a connection between SAS and the folder.</p>
 <p>To connect the folder to SAS, use a SAS LIBNAME statement to associate the libref with the physical location of the folder. The concept of a SAS library is the same regardless of the operating environment, but libraries have different physical implementations depending on the environment.</p>
-<p>Example : libname perm "c:_perm" ;</p>
+<p>Example : libname perm “c:_perm” ;</p>
 <p>This is will let SAS to read and write to folder “sas_perm”</p>
 <p>Once the a library is created you can save anything out of SAS session .SAS program , .SAS output file , .SAS log file etc.</p>
+</div>
 </div>
 <div id="r-studio" class="section level1">
 <h1>R Studio</h1>
@@ -45,12 +102,10 @@ Sashelp is a permanent library that contains sample SAS tables that you can acce
 <p><img src="images/rstudio-workspace.jpg" /></p>
 <p>This will cause you some short-term pain, because now when you restart RStudio it will not remember the results of the code that you ran last time. But this short-term pain will save you long-term agony because it forces you to capture all important interactions in your code. There’s nothing worse than discovering three months after the fact that you’ve only stored the results of an important calculation in your workspace, not the calculation itself in your code.</p>
 <p>There is a great pair of keyboard shortcuts that will work together to make sure you’ve captured the important parts of your code in the editor:</p>
-<p>Press Cmd/Ctrl + Shift + F10 to restart RStudio.
-Press Cmd/Ctrl + Shift + S to rerun the current script.</p>
+<p>Press Cmd/Ctrl + Shift + F10 to restart RStudio. Press Cmd/Ctrl + Shift + S to rerun the current script.</p>
 <ul>
 <li>Where does your analysis live?</li>
 </ul>
 <p>R has a powerful notion of the working directory. This is where R looks for files that you ask it to load, and where it will put any files that you ask it to save.</p>
-<p>RStudio shows your current working directory at the top of the console:
-<img src="images/rstudio-wd.png" /></p>
+<p>RStudio shows your current working directory at the top of the console: <img src="images/rstudio-wd.png" /></p>
 </div>
