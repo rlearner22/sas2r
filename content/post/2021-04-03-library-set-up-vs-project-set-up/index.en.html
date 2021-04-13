@@ -19,6 +19,7 @@ tags:
 <div id="sas-libraries-r-studio-project" class="section level2">
 <h2>SAS Libraries / R Studio Project</h2>
 <p>High level Summary</p>
+<p>Case 1 : “PERM” is windows folder</p>
 <table>
 <caption>SAS Libname Vs R -studio setup</caption>
 <colgroup>
@@ -35,7 +36,7 @@ tags:
 </thead>
 <tbody>
 <tr class="odd">
-<td>“PERM” is windows folder</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -55,12 +56,18 @@ tags:
 <td>R has different representation for “\”, On Windows you can use it either way</td>
 </tr>
 <tr class="odd">
-<td>Way of Creating windows folder</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Version 9.3 using option DLCREATEDIR Libname newdir “C:/”</td>
+<td>Case 2: Way of Creating</td>
+<td>windows folder</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>SAS Version 9.3 using option DLCREATEDIR<br />
+Libname newdir “C:/”</td>
 <td><p>use Library (HERE) install.packages(“here) install_load(”here")</p>
 <p>ifelse(!dir.exists(“data”) , dir.create(“data”) , “Folder exits already”)</p>
 <p>ifelse(!dir.exists(“output”) , dir.create(“output”) , “Folder exits already”)</p>
@@ -69,12 +76,12 @@ tags:
 <p>ifelse(!dir.exists(“script”) , dir.create(“script”) , “Folder exits already”)</p></td>
 <td>This will project folders</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>GUI way</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>You can use the Create library icon located in the toolbox. Enter the library name</td>
 <td>In R studio use Click File-&gt; New Project then Click New Director –&gt; Empty Project then give a project name ( would be same name of the project on windows that would be created ) then location where you want it created default is Document folder ( You can change it by using BROWSE button</td>
 <td>It is important to create a *FOLDER* to use here package . Using the New project option is highly recommended .</td>
