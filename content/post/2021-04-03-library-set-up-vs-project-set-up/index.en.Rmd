@@ -43,7 +43,11 @@ High level Summary
 
 : SAS Libname Vs R -studio setup
 
-![*Illustration by Allison Horst*\<[allisonhorst (Allison Horst) (github.com)](https://github.com/allisonhorst)\>SAS Libraries
+![](images/here.png)
+
+![*Illustration by Allison Horst*\<[allisonhorst (Allison Horst) (github.com)](https://github.com/allisonhorst)\>
+
+SAS Libraries
 
 Detailed Explanation
 
