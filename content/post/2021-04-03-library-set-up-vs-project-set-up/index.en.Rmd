@@ -63,11 +63,9 @@ GUI way
 
 : SAS Libname Vs R -studio setup
 
-SAS Libraries
+# SAS Libraries
 
-Detailed Explanation
-
-SAS users can skip part
+-   SAS users can skip this part
 
 SAS tables are stored in SAS libraries. A SAS library is a collection of SAS files that are referenced and stored as a unit.
 
@@ -89,11 +87,11 @@ To use this folder as a SAS library, you must tell SAS about it. Sometimes this 
 
 To connect the folder to SAS, use a SAS LIBNAME statement to associate the libref with the physical location of the folder. The concept of a SAS library is the same regardless of the operating environment, but libraries have different physical implementations depending on the environment.
 
-Example : libname perm "c:\sas\_perm" ;
+Example : libname perm "c:\perm" ;
 
-This is will let SAS to read and write to folder "sas_perm"
+This is will let SAS to read and write to folder "perm"
 
-Once the a library is created you can save anything out of SAS session .SAS program , .SAS output file , .SAS log file etc.
+Once the a library is created you can save anything out of SAS session .SAS program , .LST output file , .LOG log file , data files etc .
 
 # R Studio
 
@@ -101,7 +99,9 @@ In R Studio projects
 
 Reference material from (R for Data science) <https://r4ds.had.co.nz/workflow-projects.html>
 
-It is highly recommend that you instruct RStudio not to preserve your workspace between sessions:
+In the section 8.1 **What is Real ?** he says
+
+"It is highly recommend that you instruct RStudio not to preserve your workspace between sessions:"
 
 ![](images/rstudio-workspace.jpg)
 
