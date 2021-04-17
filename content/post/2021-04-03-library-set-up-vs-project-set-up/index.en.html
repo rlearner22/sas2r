@@ -23,9 +23,9 @@ tags:
 <table>
 <caption>In Brief</caption>
 <colgroup>
-<col width="18%" />
-<col width="43%" />
-<col width="38%" />
+<col width="23%" />
+<col width="41%" />
+<col width="35%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -41,7 +41,7 @@ tags:
 <td>DO NOT USE this method</td>
 </tr>
 <tr class="even">
-<td>Use system macro</td>
+<td>Use system macros eg: %curdir or SAS_EXECFILENAME</td>
 <td>use HERE package</td>
 <td>Recommended</td>
 </tr>
@@ -70,7 +70,7 @@ Libname newdir “C:/”</td>
 <p>ifelse(!dir.exists(“output/data”) , dir.create(“output/data”) , “Folder exits already”)</p>
 <p>ifelse(!dir.exists(“output/plots”) , dir.create(“Output/plots”) , “Folder exits already”)</p>
 <p>ifelse(!dir.exists(“script”) , dir.create(“script”) , “Folder exits already”)</p></td>
-<td>This will project folders</td>
+<td>This will create project folders</td>
 </tr>
 <tr class="odd">
 <td></td>
