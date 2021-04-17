@@ -1,7 +1,7 @@
 ---
 title: SAS Library set up Vs R Studio Project set up 
 author: PhaniKumar S tata
-cover: images/Rama_sethu.jpg
+cover:  
 date: '2021-04-03'
 slug: library-set-up-vs-project-set-up
 categories:
@@ -107,7 +107,15 @@ R has a powerful notion of the working directory. This is where R looks for file
 
 RStudio shows your current working directory at the top of the console: ![](images/rstudio-wd.png)
 
-Very Nice "HERE" package
+There is also another simple way creating project folder with in R studio IDE where you see the Files/Plots/Packages/Help/Viewer section
+
+![](images/pROJECT_SET_up.JPG)
+
+You can use New Folder option browse to location where you want to store and then create a new folder (Windows folder) and then assign it as working directory. This way you will be creating the working directory but not .Rprog file . This way is helpful to create a working directory by point and click .
+
+The best way is to use R package "HERE" , it's very flexible and great way to organize folder structure.
+
+Very Nice "HERE" package picture that explains a lot in one go
 
 ![](images/here.png)
 
