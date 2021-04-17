@@ -115,7 +115,7 @@ You can use New Folder option browse to location where you want to store and the
 
 The best way is to use R package "HERE" , it's very flexible and great way to organize folder structure.
 
-Very Nice "HERE" package picture that explains a lot in one go
+Very Nice "HERE" package picture that explains a lot in one go b
 
 ![](images/here.png)
 
