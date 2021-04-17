@@ -47,7 +47,7 @@ Case 1 : "PERM" is windows folder
 |                                                   |                                                                                           |                                                                               |
 +---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
-: In Brief
+: In Brief SAS Libname Vs R -studio setup
 
 GUI way
 
@@ -60,8 +60,6 @@ GUI way
 +------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 |                                                                                    | Can use New folder option in the Files section to create a new folder and make it as working directory                                                                                                                                                                                             |                                                                                                                   |
 +------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
-
-: SAS Libname Vs R -studio setup
 
 # SAS Libraries
 
@@ -95,7 +93,7 @@ Once the a library is created you can save anything out of SAS session .SAS prog
 
 # R Studio
 
-In R Studio projects
+-   In R Studio projects
 
 Reference material from (R for Data science) <https://r4ds.had.co.nz/workflow-projects.html>
 
@@ -121,11 +119,11 @@ There is also another simple way creating project folder with in R studio IDE wh
 
 ![](images/pROJECT_SET_up.JPG)
 
-You can use New Folder option browse to location where you want to store and then create a new folder (Windows folder) and then assign it as working directory. This way you will be creating the working directory but not .Rprog file . This way is helpful to create a working directory by point and click .
+You can use New Folder option browse to location where you want to store and then create a new folder (Windows folder) and then assign it as working directory. This way you will be creating the working directory but not .Rproj file . This method is helpful in create a working directory by point and click .
 
-The best way is to use R package "HERE" , it's very flexible and great way to organize folder structure.
+The best way to organize project folders in R is to use R projects option and then use R package "HERE" to create sub folders.
 
-Very Nice "HERE" package picture that explains a lot in one go b
+Very Nice "HERE" package picture that explains a lot.
 
 ![](images/here.png)
 
