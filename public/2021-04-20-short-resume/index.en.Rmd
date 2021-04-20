@@ -1,0 +1,9 @@
+---
+title: Short Resume
+author: Phanikumar S tata
+date: '2021-04-20'
+slug: short-resume
+categories: []
+tags: []
+---
+
