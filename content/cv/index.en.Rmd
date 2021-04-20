@@ -1,5 +1,5 @@
 ---
-title:  short resume
+title: short resume
 author: Phanikumar s tata
 date: "`r Sys.Date()`"
 output:
