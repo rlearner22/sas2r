@@ -49,9 +49,12 @@ menu:
     - name: About
       url: /about/
       weight: 4
+    - name: CV
+      url: /CV/
+      weight: 5      
     - name: RSS
       url: /index.xml
-      weight: 5
+      weight: 6
 
 markup:
   defaultMarkdownHandler: goldmark
