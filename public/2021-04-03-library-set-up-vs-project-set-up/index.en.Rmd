@@ -1,0 +1,130 @@
+---
+title: SAS Library set up Vs R Studio Project set up 
+author: PhaniKumar S tata
+cover:  
+date: '2021-04-03'
+slug: library-set-up-vs-project-set-up
+categories:
+  - R
+  - R-studio
+tags:
+  - markdown
+---
+
+# Keeping all the files associated with a project (script/output/data) together
+
+## SAS Libraries / R Studio Project
+
+High level Summary
+
+Case 1 : "PERM" is windows folder
+
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+| SAS                                               | R                                                                                         | Notes                                                                         |
++===================================================+===========================================================================================+===============================================================================+
+| Libname "c:\\PERM"                                | setwd("c:\\PERM")                                                                         | DO NOT USE this method                                                        |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+| Use system macros eg: %curdir or SAS_EXECFILENAME | use HERE package                                                                          | Recommended                                                                   |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+| can use "\\" windows style backward               | accepts only "/" forward slashes . When used "\\" will throw an error                     | R has different representation for "\\", On Windows you can use it either way |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+|                                                   |                                                                                           |                                                                               |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+| Case 2: Way of Creating                           | windows folder                                                                            |                                                                               |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+| SAS Version 9.3 using\                            | use Library (HERE) install.packages("here) install_load("here")                           | This will create project folders                                              |
+| option dlcretedir\                                |                                                                                           |                                                                               |
+| Libname newdir "C:/"                              | ifelse(!dir.exists("data") , dir.create("data") , "Folder exits already")                 |                                                                               |
+|                                                   |                                                                                           |                                                                               |
+|                                                   | ifelse(!dir.exists("output") , dir.create("output") , "Folder exits already")             |                                                                               |
+|                                                   |                                                                                           |                                                                               |
+|                                                   | ifelse(!dir.exists("output/data") , dir.create("output/data") , "Folder exits already")   |                                                                               |
+|                                                   |                                                                                           |                                                                               |
+|                                                   | ifelse(!dir.exists("output/plots") , dir.create("Output/plots") , "Folder exits already") |                                                                               |
+|                                                   |                                                                                           |                                                                               |
+|                                                   | ifelse(!dir.exists("script") , dir.create("script") , "Folder exits already")             |                                                                               |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+|                                                   |                                                                                           |                                                                               |
++---------------------------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+
+: In Brief SAS Libname Vs R -studio setup
+
+GUI way
+
++------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| SAS                                                                                | R                                                                                                                                                                                                                                                                                                  | Notes                                                                                                             |
++:==================================================================================:+:==================================================================================================================================================================================================================================================================================================:+===================================================================================================================+
+|                                                                                    |                                                                                                                                                                                                                                                                                                    |                                                                                                                   |
++------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| You can use the Create library icon located in the toolbox. Enter the library name | In R studio use Click File-\> New Project then Click New Director --\> Empty Project then give a project name ( would be same name of the project on windows that would be created ) then location where you want it created default is Document folder ( You can change it by using BROWSE button | It is important to create a \*FOLDER\* to use here package . Using the New project option is highly recommended . |
++------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+|                                                                                    | Can use New folder option in the Files section to create a new folder and make it as working directory                                                                                                                                                                                             |                                                                                                                   |
++------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+
+# SAS Libraries
+
+-   SAS users can skip this part
+
+SAS tables are stored in SAS libraries. A SAS library is a collection of SAS files that are referenced and stored as a unit.
+
+Each file is a member of the library. Work is a temporary library where you can store and access SAS tables for the duration of the SAS session. It is the default library.
+
+Note: SAS deletes the Work library and its contents when the SAS session ends. Sashelp is a permanent library that contains sample SAS tables that you can access during your SAS session.
+
+Sasuser is a permanent library that you can use to store and access SAS tables in any SAS session. Users can create their own SAS libraries.
+
+-   A user-defined library is permanent. Tables are stored until the user deletes them.
+-   A user-defined library is implemented within the operating environment's file system.
+-   It is not automatically available in a SAS session.
+
+Accessing a Permanent Library with the LIBNAME Statement
+
+First, identify the location of the library. For example, a Microsoft Windows folder could be used as a SAS library. You can use an existing folder or create a new one. After a folder is identified or created, the Windows operating system knows about the folder, but SAS does not.
+
+To use this folder as a SAS library, you must tell SAS about it. Sometimes this is referred to as making a connection between SAS and the folder.
+
+To connect the folder to SAS, use a SAS LIBNAME statement to associate the libref with the physical location of the folder. The concept of a SAS library is the same regardless of the operating environment, but libraries have different physical implementations depending on the environment.
+
+Example : libname perm "c:\perm" ;
+
+This is will let SAS to read and write to folder "perm"
+
+Once the a library is created you can save anything out of SAS session .SAS program , .LST output file , .LOG log file , data files etc .
+
+# R Studio
+
+-   In R Studio projects
+
+Reference material from (R for Data science) <https://r4ds.had.co.nz/workflow-projects.html>
+
+In the section 8.1 **What is Real ?** he says
+
+"It is highly recommend that you instruct RStudio not to preserve your workspace between sessions:"
+
+![](images/rstudio-workspace.jpg)
+
+This will cause you some short-term pain, because now when you restart RStudio it will not remember the results of the code that you ran last time. But this short-term pain will save you long-term agony because it forces you to capture all important interactions in your code. There's nothing worse than discovering three months after the fact that you've only stored the results of an important calculation in your workspace, not the calculation itself in your code.
+
+There is a great pair of keyboard shortcuts that will work together to make sure you've captured the important parts of your code in the editor:
+
+Press Cmd/Ctrl + Shift + F10 to restart RStudio. Press Cmd/Ctrl + Shift + S to rerun the current script.
+
+-   Where does your analysis live?
+
+R has a powerful notion of the working directory. This is where R looks for files that you ask it to load, and where it will put any files that you ask it to save.
+
+RStudio shows your current working directory at the top of the console: ![](images/rstudio-wd.png)
+
+There is also another simple way creating project folder with in R studio IDE where you see the Files/Plots/Packages/Help/Viewer section
+
+![](images/pROJECT_SET_up.JPG)
+
+You can use New Folder option browse to location where you want to store and then create a new folder (Windows folder) and then assign it as working directory. This way you will be creating the working directory but not .Rproj file . This method is helpful in create a working directory by point and click .
+
+The best way to organize project folders in R is to use R projects option and then use R package "HERE" to create sub folders.
+
+Very Nice "HERE" package picture that explains a lot.
+
+![](images/here.png)
+
+![*Illustration by Allison Horst*\<[allisonhorst (Allison Horst) (github.com)](https://github.com/allisonhorst)\>

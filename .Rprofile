@@ -21,3 +21,11 @@ options(
 
 # fix Hugo version
 options(blogdown.hugo.version = "0.82.0")
+#Changing the new posts default options 
+#change the blogdown.subdir = to new folder when needed default folder is 
+# blogdown.subdir = "post" subdir = getOption("blogdown.subdir", "post")
+# use subdir = getOption("blogdown.subdir", "cv") instead of changing it global options
+
+options(blogdown.ext = ".Rmd", blogdown.author = "Phanikumar S tata",
+        blogdown.subdir = "cv")
+

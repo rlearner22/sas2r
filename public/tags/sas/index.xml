@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAS on SAS2R</title>
+    <link>https://sas2r.netlify.app/tags/sas/</link>
+    <description>Recent content in SAS on SAS2R</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sas2r.netlify.app/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting_started</title>
+      <link>https://sas2r.netlify.app/2021-04-04-getting-started/</link>
+      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sas2r.netlify.app/2021-04-04-getting-started/</guid>
+      <description>How Can I use SAS software for personnel researchThere are couple of ways you can do
+Download student version of SAS software and set up an virtual environment ( this means that within your computer you will be creating a folder and make it virtual , that way you can’t install anything else in that folder) .You need certain amount of research to install it .</description>
+    </item>
+    
+  </channel>
+</rss>

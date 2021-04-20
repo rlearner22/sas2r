@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on SAS2R</title>
+    <link>https://sas2r.netlify.app/tags/markdown/</link>
+    <description>Recent content in markdown on SAS2R</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sas2r.netlify.app/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAS Library set up Vs R Studio Project set up</title>
+      <link>https://sas2r.netlify.app/2021-04-03-library-set-up-vs-project-set-up/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sas2r.netlify.app/2021-04-03-library-set-up-vs-project-set-up/</guid>
+      <description>Keeping all the files associated with a project (script/output/data) togetherSAS Libraries / R Studio ProjectHigh level Summary
+Case 1 : “PERM” is windows folder
+In Brief SAS Libname Vs R -studio setupSASRNotesLibname “c:\PERM”setwd(“c:\PERM”)DO NOT USE this methodUse system macros eg: %curdir or SAS_EXECFILENAMEuse HERE packageRecommendedcan use “\” windows style backwardaccepts only “/” forward slashes .</description>
+    </item>
+    
+    <item>
+      <title>Cupper Typography</title>
+      <link>https://sas2r.netlify.app/cupper-typography/</link>
+      <pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate>
+      
+      <guid>https://sas2r.netlify.app/cupper-typography/</guid>
+      <description>Headings # Heading 1 ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6  Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_  This text will be italic
+This will also be italic
+This text will be bold</description>
+    </item>
+    
+  </channel>
+</rss>
